@@ -1,8 +1,8 @@
-#include<stdio.h>`
+#include <stdio.h>`
 /**
 * main - Entry
 *
-* return: Always 0
+* Return: Always 0
 */
 int main(void)
 {
