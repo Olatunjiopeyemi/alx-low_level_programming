@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<stdlib.h>
+/**
+ * main - Entry
+ * printing lowercase in reverse
+ * Return: 0
+ */
+int main(void)
+{
+	char ch = 'z';
+
+	while (ch >= 'a')
+		ch--;
+	{
+		putchar(ch);
+	}
+	putchar('\n');
+	return (0);
+}
