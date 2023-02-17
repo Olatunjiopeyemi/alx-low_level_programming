@@ -1,13 +1,11 @@
-#include<stdio.h>
+#include<stdio.h>`
 /**
- *main - Entry point
- *Description: 'a program to print out a line of program'
-*return: always 0(success)
+* main - Entry
+*
+* return: Always 0
 */
 int main(void)
 {
-
-char puzzle[] = "Programming is like building a multilingual puzzle";
-puts(puzzle); /*writing the string to stdout*/
+puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
