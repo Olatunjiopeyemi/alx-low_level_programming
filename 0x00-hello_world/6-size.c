@@ -5,15 +5,11 @@
  */
 int main(void)
 {
-	char a;
-	int b;
-	long int c;
-	long long int d;
-	float f;
-printf("size of char is:%lu.\n", (unsigned long)sizeof(a));
-printf("the size of int is:%lu.\n", (unsigned long)sizeof(b));
-printf("the size of long int is:%lu.\n", (unsigned long)sizeof(c));
-printf("the size of long long int is:%lu.\n", (unsigned long)sizeof(d));
-printf("the size of float is:%lu.\n", (unsigned long)sizeof(f));
+printf("Size of Int Data Types in C = %2d bytes \n", sizeof(short int));
+printf("Size of Long Int Data Types in C = %2d bytes \n", sizeof(long int));
+printf("Size of Float Data Types in C = %2d bytes \n", sizeof(float));
+printf("Size of Double Data Types in C = %2d bytes \n", sizeof(double));
+printf("Size of Char Data Types in C = %2d bytes \n", sizeof(char));
+
 return (0);
 }
