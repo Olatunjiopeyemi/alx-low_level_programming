@@ -1,10 +1,10 @@
 #include<stdio.h>
 /**
- *  * main - entry point
- *   * print all lowercase letters
- *   then uppercases
- *    * Return: 0
- *     */
+ * main - entry point
+ * print all lowercase letters
+ * then uppercases
+ * Return: 0
+ */
 
 int main(void)
 {
@@ -14,7 +14,7 @@ int main(void)
 	for (lw = 'a'; lw <= 'z'; lw++)
 	{
 		putchar(lw);
-	for(upp = 'A'; upp <= 'Z'; upp++)
+	for (upp = 'A'; upp <= 'Z'; upp++)
 		putchar(upp)
 	}
 	putchar('\n');
