@@ -1,17 +1,16 @@
 #include<stdio.h>
-#include<stdlib.h>
 /**
  * main - entry point
  * print all lowercase letters
  * Return: 0
  */
 
-	int main(void)
+int main(void)
 {
-	char lower;
-	for (lower = 'a'; lower <= 'z'; lower++);
+char lw;
+for (lw = 'a'; lw <= 'z'; lw++);
 {
-	putchar(lower);
+putchar(lw);
 }
 putchar('\n');
 return (0);
