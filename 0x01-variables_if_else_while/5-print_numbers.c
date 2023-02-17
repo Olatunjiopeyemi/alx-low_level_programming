@@ -11,12 +11,12 @@ int main(void)
 
 nums = 0;
 
-while (n < 10)
+while (nums < 10)
 {
 	printf("%i", nums);
 	nums++;
 }
-printf('\n');
+printf("\n");
 return (0);
 }
 
