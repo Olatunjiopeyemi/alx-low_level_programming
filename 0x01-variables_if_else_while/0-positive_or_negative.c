@@ -17,11 +17,11 @@ if (n == 0)
 }
 else if (n < 0)
 {
-	printf("%d is a negative number\n" n);
+	printf("%d is a negative number\n", n);
 }
 else
 {
-	printf("%d is a positive number\n" n);
+	printf("%d is a positive number\n", n);
 }
 
 return (0);
