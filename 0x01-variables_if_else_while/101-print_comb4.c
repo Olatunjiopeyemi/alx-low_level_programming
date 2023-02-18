@@ -13,7 +13,7 @@ int main(void)
 
 	while (c < 10)
 	{ b = 0;
-		while (d < 10)
+		while (b < 10)
 		{
 			a = 0;
 			while (a < 10)
