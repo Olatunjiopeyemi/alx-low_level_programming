@@ -3,7 +3,7 @@
 
 
 /**
- * _islower - body of program
+ * _islower -> body of program
  *
  * c: characterr argument
  * a function that checks for lowercase character
