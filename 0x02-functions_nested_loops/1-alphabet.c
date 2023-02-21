@@ -2,10 +2,10 @@
 #include "main.h"
 
 /**
- * main - Entry
+ * print_alphabet - body`
  * A function that prints the alphabet, in lowercase
  *
- * Return: void
+ *
  */
 
 
