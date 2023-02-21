@@ -4,22 +4,26 @@
  * jack_bauer - body
  *
  * a function that prints every minute of the day
- * x, y: arguments
+ * hrs, mins: arguments
  * Return: void
  */
 
 void jack_bauer(void)
 {
-	int x = '00:00';
-	int y;
+	int hrs;
+	int mins;
 
-	while (x <= '23:59')
+	for (hrs = 0; hrs <= 23; hrs++)
+	{
+		for (mins = 0; mins <= 59; mins++)
 		{
-		y = '0';
-		while (y <= '60')
-			_putchar('0' + y);
-			y++;
+			_putchar((hrs / 10) + '0');
+			_putchar((hrs % 10) + '0');
+			_putchar(':');
+			_putchar((mins / 10) + '0');
+			_putchar((mins % 10) + '0');
+			_putchar('\n');
 		}
-	x++;
+	}
 
 }
