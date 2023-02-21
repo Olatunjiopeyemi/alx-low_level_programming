@@ -4,14 +4,23 @@ include "main.h"
  * print_last_digit - body
  *
  *@x: argument
- * a function that prints the sign of a number
+ * a function that prints the last digit
  *
  * Return: value of the last digit
  * last_digit: modulus
  */
 int print_last_digit(int x)
 {
-	last_digit = x % 10;
-		if (last_digit > 0)
+	int last_digit = x % 10;
+
+		if (last_digit >= 0)
+		{
+			_putchar('0' + last_digit);
 			return (last_digit);
+		}
+		else
+		{
+			_putchar('0' + last_digit);
+			return (-1 * last_digit);
+		}
 }
