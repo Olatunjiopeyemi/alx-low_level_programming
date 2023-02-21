@@ -3,15 +3,14 @@
 
 
 /**
- * _islower - body
+ * _islower - body of program
  *
- * int c - characterr argument
+ * c: characterr argument
  * a function that checks for lowercase character
- * Return: 0 or 1 
+ * Return: 0 or 1
  */
 
 int _islower(int c)
 {
-	return(c>= 'a' && c <= 'z');
+	return (c >= 'a' && c <= 'z');
 }
-
