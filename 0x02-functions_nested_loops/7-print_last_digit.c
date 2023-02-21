@@ -6,7 +6,7 @@ include "main.h"
  *@x: argument
  * a function that prints the last digit
  *
- * Return: value of the last digit
+ * Return: last digit
  * last_digit: modulus
  */
 int print_last_digit(int x)
