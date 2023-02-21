@@ -5,7 +5,7 @@
  * main - Entry
  * A function that prints the alphabet, in lowercase
  *
- * Return: 0
+ * Return: void
  */
 
 
