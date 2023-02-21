@@ -10,7 +10,7 @@
  * Return: 0 or 1 
  */
 
-void print_alphabet_x10(void)
+int _islower(int c)
 {
 	return(c>= 'a' && c <= 'z');
 }
