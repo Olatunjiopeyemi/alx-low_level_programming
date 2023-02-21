@@ -9,7 +9,7 @@
  */
 
 
-int main(void)
+void print_alphabet(void)
 {
 	char letters = 'a';
 		while (letters <= 'z')
@@ -18,6 +18,6 @@ int main(void)
 			letters++;
 		}
 			putchar('\n');
-	return (0);
+	return (void);
 
 }
