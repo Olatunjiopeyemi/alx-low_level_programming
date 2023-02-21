@@ -18,7 +18,6 @@ int main(void)
 			putchar(letters);
 			letters++;
 		}
-		print_alphabet();
 			putchar('\n');
 	return (0);
 
