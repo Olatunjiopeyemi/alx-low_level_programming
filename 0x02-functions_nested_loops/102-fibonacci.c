@@ -4,7 +4,7 @@
  * main - body
  *  a program that prints the first 50 Fibonacci numbers,
  *
- *  Return: 0
+ *  Return: nothing
  */
 int main(void)
 {
@@ -23,7 +23,7 @@ int main(void)
 	j = k - j;
 	printf(", %ld", k);
 	}
-	++k;
+	++i;
 	}
 	printf("\n");
 	return (0);
