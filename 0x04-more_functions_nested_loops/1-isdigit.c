@@ -1,12 +1,12 @@
-nclude "main.h"
+#include "main.h"
 
 /**
- * _isdigit - Body a function that checks for a digit (0 through 9).
- * @c: argument
- * Return: 0 or 1
+ * _isdigit - Checks for digits (0 through 9)
+ * @c: int to be checked
+ * Return: 1 if c is a Digit, 0 Otherwise
  */
+
 int _isdigit(int c)
 {
-	return (c >= '0' && c < '10');
+	return (c >= '0' && c <= '9');
 }
-
