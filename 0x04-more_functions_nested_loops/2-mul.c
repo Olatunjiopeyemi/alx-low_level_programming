@@ -4,7 +4,7 @@
  * mul - Multiplies two integers
  * @a: Argument
  * @b: Argument
- * @C: Multiplication of arguments
+ * @m: Multiplication of arguments
  * Return: Answer
  */
 
