@@ -9,13 +9,7 @@
 int _isupper(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-	{
-		_putchar(c);
-		c++;
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
