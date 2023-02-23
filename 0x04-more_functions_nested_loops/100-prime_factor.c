@@ -15,10 +15,10 @@ int main(void)
 	{
 		while (a % b == 0)
 		{
-			a = a / a;
+			a = a / b;
 		}
 	}
-	printf("%lu", y);
+	printf("%lu", b);
 	putchar('\n');
 	return (0);
 }
