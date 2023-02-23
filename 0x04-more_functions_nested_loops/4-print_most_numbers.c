@@ -10,5 +10,6 @@ void print_most_numbers(void)
 	while (ope <= '9' && ope != '2' && ope != '4')
 	{
 		_putchar(ope);
+		ope++;
 	}
 }
