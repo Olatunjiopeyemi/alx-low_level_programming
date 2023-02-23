@@ -1,14 +1,17 @@
 #include "main.h"
 
 /**
- * mul - Checks for digits (0 through 9)
- * @b: Int to be checked
- * @b: Argument
- * Return: 0
- * @m: Multiplication
+ * mul - Multiplies two integers
+ * @a: int to be multiplied to b
+ * @b: int to be multiplied to a
+ * Return: The results of the operation
  */
+
 int mul(int a, int b)
 {
-	int m = a * b
-		return (m)
+	int c;
+
+	m = a * b;
+
+	return (m);
 }
