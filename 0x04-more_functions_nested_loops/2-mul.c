@@ -2,16 +2,16 @@
 
 /**
  * mul - Multiplies two integers
- * @a: int to be multiplied to b
- * @b: int to be multiplied to a
- * Return: The results of the operation
+ * @a: Argument
+ * @b: Argument
+ * @C: Multiplication of arguments
+ * Return: Answer
  */
 
 int mul(int a, int b)
 {
-	int c;
 
-	m = a * b;
+	int m = a * b;
 
 	return (m);
 }
