@@ -10,10 +10,8 @@ char *leet(char *s)
 {
 	int x, y;
 
-	char *bag1;
-	char *bag2;
-	bag1 = "aAeEoOtTlL"
-	bag2 = "4433007711"
+	char *bag1 = "aAeEoOtTlL";
+	char *bag2 = "4433007711";
 
 	for (x = 0; s[x] != '\0'; x++)
 	{
