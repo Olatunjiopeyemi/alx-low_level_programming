@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * Return: the difference
+ * Return: 0 or *s1 - *s2
  * @s1: argument
  * @s2: argument
  * a function that compares two strings.
