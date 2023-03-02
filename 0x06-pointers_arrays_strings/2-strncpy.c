@@ -7,7 +7,7 @@
  * @n: argument
  *  a function that copies a string.
  *  Return: a string
- */ 
+ */
 
 char *_strncpy(char *dest, char *src, int n)
 {
