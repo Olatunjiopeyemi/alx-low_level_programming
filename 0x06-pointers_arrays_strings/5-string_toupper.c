@@ -4,7 +4,7 @@
  * *string_toupper - body
  * a function that changes all lowercase letters of a string to uppercase
  * Return: uppercase
- */ 
+ */
 
 char *string_toupper(char *s)
 {
