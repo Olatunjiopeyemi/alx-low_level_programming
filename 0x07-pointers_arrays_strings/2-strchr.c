@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strchr - body
@@ -17,8 +18,6 @@ char *_strchr(char *s, char c)
 	{
 
 		x = *s++;
-
-
 		if (x == c)
 			return (s - 1);
 
