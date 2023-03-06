@@ -19,7 +19,7 @@ void print_diagsums(int *a, int size)
 
 	x = 0;
 
-	while (x < size)
+	if (x < size)
 	{
 		add1 += a[(size * x) + x];
 		add2 += a[(size * (x + 1)) - (x + 1)];
