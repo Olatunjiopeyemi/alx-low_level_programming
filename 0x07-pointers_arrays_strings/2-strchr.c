@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strchr _ body
+ * _strchr - body
  *  a function that locates a character in a string
  *  @s: a string
  *  @c: a character argument
@@ -10,19 +10,13 @@
 
 char *_strchr(char *s, char c)
 {
-	char x;
+	int x;
 
-	x = "*s";
+	x = *s++;
 
 	if (x == c)
-	{
-		return(s - 1);
-		x++;
+		return (s - 1);
 
-	}
 	if (x == 0)
-	{
 		return (NULL);
-		x++;
-	}
 }
