@@ -10,9 +10,8 @@ void print_chessboard(char (*a)[8])
 {
 	int x, y;
 
-	x = 0;
 
-	while (x <= 7)
+	for (x = 0; x <= 7; x++)
 	{
 		y = 0;
 
@@ -24,5 +23,4 @@ void print_chessboard(char (*a)[8])
 
 		_putchar('\n');
 	}
-	x++;
 }
