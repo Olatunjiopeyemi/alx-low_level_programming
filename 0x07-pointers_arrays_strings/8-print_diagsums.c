@@ -16,14 +16,11 @@ void print_diagsums(int *a, int size)
 	add1 = 0;
 	add2 = 0;
 
-	x = 0;
-
-	if (x < size)
+	for (x = 0; x < size; x++)
 	{
 		add1 += a[(size * x) + x];
 		add2 += a[(size * (x + 1)) - (x + 1)];
 	}
-	x++;
 
 	printf("%d, %d\n", add1, add2);
 }
