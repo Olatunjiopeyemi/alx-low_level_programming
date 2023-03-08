@@ -11,7 +11,7 @@
 int check_sqrt_recursion(int n, int i)
 {
 	if (n < 0)
-                return (-1);
+		return (-1);
 	else if (i * i > n)
 		return (-1);
 	else if (i * i == n)
@@ -20,7 +20,8 @@ int check_sqrt_recursion(int n, int i)
 }
 
 /**
- * _sqrt_recursion -> returns square root of number
+ * _sqrt_recursion -body
+ *returns square root of number
  * @n: number to find square root
  * Return: square root
  */
