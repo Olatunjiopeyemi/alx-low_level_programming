@@ -1,6 +1,32 @@
 #include <stdio.h>
 #include "main.h"
 
+/**
+ * main - body
+ * a program that multiplies two numbers
+ * @argc: number of arguments on a command line
+ * @argv: array of arguments addresses
+ * Return: 0 (Successful), 1 (Error)
+ */
+
+int main(int argc, char *argv[])
+{
+	int result, num1, num2;
+
+	if (argc < 3 || argc > 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+
+	num1 = _atoi(argv[1]);
+	num2 = _atoi(argv[2]);
+	result = num1 * num2;
+
+	printf("%d\n", result);
+
+	return (0);
+}
 
 /**
  * _atoi - Converts a string to an integer
@@ -10,12 +36,19 @@
 
 int _atoi(char *s)
 {
-	int i = 0;
-	int d = 0;
-	int n = 0;
-	int f = 0;
-	int len = 0;
-	int digit = 0;
+	int i, d, n, f, len, digit;
+
+	i = 0;
+
+	d = 0;
+
+	n = 0;
+
+	f = 0;
+
+	len = 0;
+
+	digit = 0;
 
 	while (s[len] != '\0')
 		len++;
@@ -43,30 +76,4 @@ int _atoi(char *s)
 		return (0);
 
 	return (n);
-}
-
-/**
- * main - Entry point for my program
- * @argc: This is the number of arguments
- * @argv: This is the array of arguments
- * Return: 0 if successful and 1 if not
- */
-
-int main(int argc, char *argv[])
-{
-        int result, num1, num2;
-
-        if (argc < 3 || argc > 3)
-        {
-                printf("Error\n");
-                return (1);
-        }
-
-        num1 = _atoi(argv[1]);
-        num2 = _atoi(argv[2]);
-        result = num1 * num2;
-
-        printf("%d\n", result);
-
-        return (0);
 }
