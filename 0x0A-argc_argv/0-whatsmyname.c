@@ -7,9 +7,9 @@
  * @argc: number of arguments entered at execution time
  * @argv: the arrays containing the address of arguments
  * Return: 0
- */ 
-int main(int argc __attribute__((unused)), char* argv[])
+ */
+int main(int argc __attribute__((unused)), char *argv[])
 {
 	printf("%s\n", *argv);
-	return(0);
+	return (0);
 }
