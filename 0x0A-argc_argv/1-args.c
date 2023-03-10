@@ -10,6 +10,11 @@
  */
 int main(int argc, char *argv[])
 {
-	printf("%d/n", argc);
+	int x = 0;
+
+	if (argc == 1)
+		printf("%d\n", argc - 1);
+	else if (x++; argv++);
+		printf("%d\n", x - 1)
 	return (0);
 }
