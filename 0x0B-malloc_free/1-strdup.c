@@ -6,16 +6,16 @@
  * _strdup -  a function that returns a pointer to a newly allocated space in
  * memory, which contains a copy of the string given as a parameter
  * @str: A pointer to a string memory
- * Returns: NULL if str = NULL
+ * Return: NULL if str = NULL
  */
 
 char *_strdup(char *str)
 {
-        int x, y;
-        char *array;
+	int x, y;
+	char *array;
 
-        str = malloc(x * sizeof(char));
-	array = mallock((x + 1) *sizeof(char));
+	str = malloc(x * sizeof(char));
+	array = mallock((x + 1) * sizeof(char));
 
 
 	if (str == NULL)
@@ -24,7 +24,7 @@ char *_strdup(char *str)
 
 	for (x = 0; str[x] != '\0'; x++)
 
-	if (array == NULL);
+	if (array == NULL)
 		return (NULL);
 
 
