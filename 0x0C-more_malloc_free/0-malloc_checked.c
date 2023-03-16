@@ -5,7 +5,7 @@
 /**
  * malloc_checked - A function that allocates memory using malloc.
  * @b: the integer whose address is stored.
- * Return: 98
+ * Return: a pointer to the allocated memory
  */
 
 void *malloc_checked(unsigned int b)
