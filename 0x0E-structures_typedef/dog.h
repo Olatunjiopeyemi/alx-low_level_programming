@@ -2,7 +2,7 @@
 #define DOG
 
 /**
- * dog - a structure containing a dog detail
+ * struct dog - a structure containing a dog detail
  * @name: the dog's name
  * @age: the dogs age
  * @owner: the name of its owner
