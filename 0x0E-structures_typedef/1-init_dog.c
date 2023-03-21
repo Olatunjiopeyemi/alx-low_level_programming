@@ -9,7 +9,7 @@
  * @dogg: a pointer to the struct dog
  */
 
-void init_dog(struct dog *d, char *name, float age, char *owner)
+void init_dog(struct dog *dogg, char *name, float age, char *owner)
 {
 	if (dogg != NULL)
 	{
