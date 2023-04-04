@@ -9,17 +9,17 @@
 int sum_listint(listint_t *head)
 {
 	int sum;
-	listint_t temp = head;
+	listint_t *temp = head;
 
-	if (!head)
+	if (!temp)
 		return (0);
 
 	sum = 0;
 
-	while (head)
+	while (temp)
 	{
-		sum += head->n;
-		temp = head->next;
+		sum += temp->n;
+		temp = temp->next;
 	}
 
 	return (sum);
