@@ -5,7 +5,7 @@
  * @head: The pointer to the beginning node
  */
 
-void free_listint(listint_t *head)
+void free_listint2(listint_t **head)
 {
 	listint_t *temp;
 
@@ -19,5 +19,5 @@ void free_listint(listint_t *head)
 		*head = temp;
 	}
 
-	head = NULL;
+	*head = NULL;
 }
