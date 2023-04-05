@@ -10,7 +10,7 @@ size_t print_listint_safe(const listint_t *head)
 {
 	const listint_t *tmp_n = NULL;
 	const listint_t *l_n = NULL;
-	unsigned int cout = 0;
+	unsigned int count = 0;
 	unsigned int new_n;
 
 	tmp_n = head;
