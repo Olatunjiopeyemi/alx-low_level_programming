@@ -9,15 +9,13 @@
 
 int create_file(const char *filename, char *text_content)
 {
-	char *buffer;
 	int open, write, length = 0;
 
-	buffer = malloc(sizeof(char));
 
 	if (filename == NULL)
 		return (-1);
 
-	if (text_content == NULLL)
+	if (text_content == NULL)
 	{
 		open == open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 		if (open == -1)
