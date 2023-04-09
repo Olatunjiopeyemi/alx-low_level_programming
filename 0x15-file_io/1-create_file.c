@@ -17,7 +17,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (text_content == NULL)
 	{
-		open == open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+		open = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
 		if (open == -1)
 			return (-1);
 
@@ -29,7 +29,7 @@ int create_file(const char *filename, char *text_content)
 	for (length = 0; text_content[length]; length++)
 
 	open = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	write = write(o, text_content, length);
+	write = write(open, text_content, length);
 
 	if (open == -1)
 		return (-1);
