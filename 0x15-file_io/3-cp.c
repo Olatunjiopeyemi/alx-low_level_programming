@@ -1,4 +1,4 @@
-#include"main.h"
+#include "main.h"
 
 char *buffer(char *filename);
 void rank(int file_descriptor);
