@@ -9,15 +9,13 @@
 
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int o, w, length;
+	int o, w, length = 0;
 
 	if (!filename)
 		return (-1);
 
 	if (text_content)
 	{
-		length = 0;
-
 		while (text_content[length])
 			length++;
 	}
