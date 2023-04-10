@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 char *buffer(char *filename);
 void rank(int file_descriptor);
@@ -31,7 +33,9 @@ char *buffer(char *filename)
 
 void rank(int file_descriptor)
 {
-	int c = close(file_descriptor);
+	int c;
+
+	c = close(file_descriptor);
 
 	if (c == -1)
 	{
