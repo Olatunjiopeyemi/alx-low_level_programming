@@ -31,9 +31,9 @@ char *buffer(char *filename)
 
 void rank(int file_descriptor)
 {
-	int close = close(file_descriptor);
+	int c = close(file_descriptor);
 
-	if (close == -1)
+	if (c == -1)
 	{
 		dprintf(STDERR_FILENO, 
 				"Error: Can't close fd %d\n", file_descriptor);
@@ -51,7 +51,7 @@ void rank(int file_descriptor)
 
 int main(int argc, char *argv[])
 {
-	int file1, file2, read, write;
+	int file1, file2, r, w;
 	char *b;
 
 	if (argc != 3)
@@ -62,12 +62,12 @@ int main(int argc, char *argv[])
 
 	b = buffer(argv[2]);
 	file1 = open(argv[1], O_RDONLY);
-	read = read(file1, b, 1024);
+	r = read(file1, b, 1024);
 	file2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do
 	{
-		if (file1 == -1 || read == -1)
+		if (file1 == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't read from file %s\n", argv[1]);
@@ -75,8 +75,8 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		write = write(file2, b, read);
-		if (file2 == -1 || write == -1)
+		w = write(file2, b, r);
+		if (file2 == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]);
@@ -84,7 +84,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 
-		read = read(file1, b, 1024);
+		r = read(file1, b, 1024);
 		file2 = open(argv[2], O_WRONLY | O_APPEND);
 	}
 	while (r > 0)
