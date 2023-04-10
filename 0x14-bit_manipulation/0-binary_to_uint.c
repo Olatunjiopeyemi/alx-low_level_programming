@@ -8,7 +8,9 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int str_len, deci_num, base;
+	unsigned int deci_num, base;
+	int str_len;
+
 
 	if (!b)
 		return (0);
@@ -19,6 +21,7 @@ unsigned int binary_to_uint(const char *b)
 		if (b[str_len] != '0' && b[str_len] != '1')
 			return (0);
 	}
+
 	for (base = 1, deci_num = 0, str_len--; str_len >= 0;
 			str_len--, base = base * 2)
 	{
