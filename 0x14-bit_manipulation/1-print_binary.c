@@ -15,4 +15,6 @@ void print_binary(unsigned long int n)
 		_putchar((n >> ope) & 1 ? '1' : '0');
 	}
 
+	_putchar('\n');
+
 }
