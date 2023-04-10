@@ -23,6 +23,7 @@ char *buffer(char *filename)
 			"Error: Can't write to %s\n", filename);
 		exit(99);
 	}
+
 	return (n_buffer);
 }
 
@@ -39,7 +40,7 @@ void rank(int file_descriptor)
 
 	if (c == -1)
 	{
-		dprintf(STDERR_FILENO, 
+		dprintf(STDERR_FILENO,
 				"Error: Can't close fd %d\n", file_descriptor);
 		exit(100);
 	}
@@ -60,7 +61,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: cp file1 file2\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 
@@ -69,8 +70,8 @@ int main(int argc, char *argv[])
 	r = read(file1, b, 1024);
 	file2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
-	do
-	{
+	do {
+
 		if (file1 == -1 || r == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -90,9 +91,9 @@ int main(int argc, char *argv[])
 
 		r = read(file1, b, 1024);
 		file2 = open(argv[2], O_WRONLY | O_APPEND);
-	}
-	while (r > 0)
-	
+
+	} while (r > 0);
+
 	free(b);
 	rank(file1);
 	rank(file2);
