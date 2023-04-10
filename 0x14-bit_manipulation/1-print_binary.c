@@ -9,12 +9,23 @@
 
 void print_binary(unsigned long int n)
 {
-	int ope = 100;
-	for (ope = 100; ope >= 0; ope--)
+	int index = 0;
+
+	if (!n)
 	{
-		_putchar((n >> ope) & 1 ? '1' : '0');
+		printf("0");
+		return;
 	}
 
-	_putchar('\n');
+	while (n >>= 1) > 0);
+	index++;
 
+
+	for (; index >= 0; index--)
+	{
+		if ((n >> index) & 1)
+			printf("1");
+		else
+			printf("0");
+	}
 }
