@@ -8,8 +8,7 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int index, num;
-	int str_len;
+	unsigned int str_len, deci_num, base;
 
 	if (!b)
 		return (0);
@@ -19,16 +18,13 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[str_len] != '0' && b[str_len] != '1')
 			return (0);
-
 	}
-
-
-	for (num = 1, index = 0, str_len--; str_len >= 0;
-			str_len--, num =(num * 2))
+	for (base = 1, deci_num = 0, str_len--; str_len >= 0;
+			str_len--, base = base * 2)
 	{
 		if (b[str_len] == '1')
-			index = (num + 1);
+			deci_num = base + 1;
 	}
 
-	return (index);
+	return (deci_num);
 }
