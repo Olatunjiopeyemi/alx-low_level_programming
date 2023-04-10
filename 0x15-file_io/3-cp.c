@@ -11,7 +11,7 @@ void rank(int file_descriptor);
 
 char *buffer(char *filename)
 {
-	char n_buffer;
+	char *n_buffer;
 
 	n_buffer = malloc(sizeof(char) * 1024);
 
