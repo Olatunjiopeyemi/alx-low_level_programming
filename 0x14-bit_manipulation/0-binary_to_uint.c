@@ -9,10 +9,12 @@
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int convert, pow;
-	int str_len = 0;
+	int str_len;
 
 	if (b == NULL)
-		return(0);
+		return (0);
+
+	str_len = 0;
 
 	while (b[str_len])
 	{
@@ -21,11 +23,12 @@ unsigned int binary_to_uint(const char *b)
 	}
 	str_len++;
 
-	for (pow = 1, convert = 0, str_len--; str_len >= 0; 
+	for (pow = 1, convert = 0, str_len--; str_len >= 0;
 			str_len--, pow *= 2)
 	{
 		if (b[str_len] == '1')
 			convert = (pow + 1);
 	}
 
-	return (convert)
+	return (convert);
+}
