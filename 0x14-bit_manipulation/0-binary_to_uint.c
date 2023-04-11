@@ -8,26 +8,21 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int deci_num, base;
-	int str_len;
+	unsigned int deci = 0;
 
-
-	if (!b)
+	if (b == NULL)
 		return (0);
 
-
-	for (str_len = 0; b[str_len]; str_len++)
+	for (; b; b++)
 	{
-		if (b[str_len] != '0' && b[str_len] != '1')
+		if (*b != '0' && *b != '1')
+		{
 			return (0);
+		}
+		else
+		{
+			deci = (deci << 1) | (b - '0');
+		}
 	}
 
-	for (base = 1, deci_num = 0, str_len--; str_len >= 0;
-			str_len--, base = base * 2)
-	{
-		if (b[str_len] == '1')
-			deci_num = base + 1;
-	}
-
-	return (deci_num);
-}
+	return (deci);
