@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  *  binary_to_uint - A function that converts binary number to an unsigned int
  *  @b: A pointer to the strings of 0 and 1
@@ -23,6 +23,7 @@ unsigned int binary_to_uint(const char *b)
 	}
 
 	if (b == NULL)
-		return (0;
+		return (0);
 
 	return (deci);
+}
