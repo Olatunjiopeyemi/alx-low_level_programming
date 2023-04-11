@@ -9,7 +9,8 @@
 
 void print_binary(unsigned long int n)
 {
-	int index = 0;
+	unsigned long int new;
+	int index;
 
 	if (!n)
 	{
@@ -17,8 +18,7 @@ void print_binary(unsigned long int n)
 		return;
 	}
 
-	while (n >>= 1) > 0);
-	index++;
+	for (new = n, index = 0; (new >>= 1) > 0; index++);
 
 
 	for (; index >= 0; index--)
