@@ -10,13 +10,13 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int EOR = n ^ m;
+	unsigned long int eor = n ^ m;
 	unsigned int num = 0;
 
-	while (EOR != 0)
+	while (eor != 0)
 	{
-		num = (1 + (EOR & 1));
-		EOR >>= 1;
+		num += (eor & 1);
+		eor >>= 1;
 	}
 	return (num);
 }
