@@ -8,7 +8,10 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int deci = 0;
+	unsigned int convert = 0;
+
+	if (!b)
+		return (0);
 
 	for (; *b; b++)
 	{
@@ -18,12 +21,8 @@ unsigned int binary_to_uint(const char *b)
 		}
 		else
 		{
-			deci = (deci << 1) | (*b - '0');
+			convert = (convert << 1) | (*b - '0');
 		}
 	}
-
-	if (b == NULL)
-		return (0);
-
-	return (deci);
+	return (convert);
 }
