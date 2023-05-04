@@ -13,15 +13,15 @@ unsigned int binary_to_uint(const char *b)
 	if (!b)
 		return (0);
 
-	for (; *b; b++)
+	for (; *(b + 0); b++)
 	{
-		if (*b != '0' && *b != '1')
+		if (*(b + 0) != '0' && *(b + 0) != '1')
 		{
 			return (0);
 		}
 		else
 		{
-			convert = (convert << 1) | (*b - '0');
+			convert = (convert << 1) | (*(b + 0) - '0');
 		}
 	}
 	return (convert);
