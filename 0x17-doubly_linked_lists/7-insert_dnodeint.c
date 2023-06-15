@@ -1,6 +1,6 @@
 #include "lists.h"
 
-void insert_at_middle(dlistint_t ***h, dlistint_t **new_node, dlistint_t **curr);
+void insert_middle(dlistint_t ***h, dlistint_t **new_node, dlistint_t **curr);
 
 /**
  * insert_dnodeint_at_index -A function that inserts a node into a list
@@ -35,7 +35,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		if (index == idx)
 		{
-			insert_at_middle(&h, &new_node, &curr);
+			insert_middle(&h, &new_node, &curr);
 			return (new_node);
 		}
 
@@ -45,7 +45,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	if (index == idx)
 	{
-		new_node = add_dnodeint(h, n);
+		new_node = add_dnodeint_end(h, n);
 		return (new_node);
 	}
 
@@ -54,13 +54,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 }
 
 /**
- * insert_at_middle - A function that inserts a node at middle of a list
+ * insert_middle - A function that inserts a node at middle of a list
  * @h: Pointer to first node
  * @new_node: node to be inserted
  * @curr: node current position
  */
 
-void insert_at_middle(dlistint_t ***h, dlistint_t **new_node, dlistint_t **curr)
+void insert_middle(dlistint_t ***h, dlistint_t **new_node, dlistint_t **curr)
 {
 	(*new_node)->next = *curr;
 	(*new_node)->prev = (*curr)->prev;
