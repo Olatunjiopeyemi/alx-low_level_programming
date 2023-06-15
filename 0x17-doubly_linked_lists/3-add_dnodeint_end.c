@@ -2,7 +2,7 @@
 
 /**
  * add_dnodeint_end - a function that adds a node at the end of a list
- * @head the head node
+ * @head: the head node
  * @n: the content of the new node
  * Return: the address of the new element, or NULL
  */
