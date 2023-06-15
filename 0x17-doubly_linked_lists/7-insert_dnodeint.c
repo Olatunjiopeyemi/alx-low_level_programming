@@ -1,74 +1,54 @@
 #include "lists.h"
 
-void insert_middle(dlistint_t ***h, dlistint_t **new_node, dlistint_t **curr);
-
 /**
- * insert_dnodeint_at_index -A function that inserts a node into a list
- * @h: Pointer to first node
- * @idx: Insertion index
- * @n: content of new node.
- * Return: Address of new node, or NULL
+ * insert_dnodeint_at_index - inserts a new node at
+ * a given position
+ *
+ * @h: head of the list
+ * @idx: index of the new node
+ * @n: value of the new node
+ * Return: the address of the new node, or NULL if it failed
  */
-
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *curr = *h;
-	dlistint_t *new_node;
-	unsigned int index = 0;
+	dlistint_t *new;
+	dlistint_t *head;
+	unsigned int i;
 
-	if (!h)
-		return (NULL);
-
+	new = NULL;
 	if (idx == 0)
-	{
-		new_node = add_dnodeint(h, n);
-		return (new_node);
-	}
-
-	new_node = malloc(sizeof(dlistint_t));
-	if (!new_node)
-		return (NULL);
-
-	new_node->n = n;
-
-	while (curr)
-	{
-		if (index == idx)
-		{
-			insert_middle(&h, &new_node, &curr);
-			return (new_node);
-		}
-
-		curr = curr->next;
-		index++;
-	}
-
-	if (index == idx)
-	{
-		new_node = add_dnodeint_end(h, n);
-		return (new_node);
-	}
-
-	free(new_node);
-	return (NULL);
-}
-
-/**
- * insert_middle - A function that inserts a node at middle of a list
- * @h: Pointer to first node
- * @new_node: node to be inserted
- * @curr: node current position
- */
-
-void insert_middle(dlistint_t ***h, dlistint_t **new_node, dlistint_t **curr)
-{
-	(*new_node)->next = *curr;
-	(*new_node)->prev = (*curr)->prev;
-
-	if ((*curr)->prev)
-		(*curr)->prev->next = *new_node;
+		new = add_dnodeint(h, n);
 	else
-		**h = *new_node;
+	{
+		head = *h;
+		i = 1;
+		if (head != NULL)
+			while (head->prev != NULL)
+				head = head->prev;
+		while (head != NULL)
+		{
+			if (i == idx)
+			{
+				if (head->next == NULL)
+					new = add_dnodeint_end(h, n);
+				else
+				{
+					new = malloc(sizeof(dlistint_t));
+					if (new != NULL)
+					{
+						new->n = n;
+						new->next = head->next;
+						new->prev = head;
+						head->next->prev = new;
+						head->next = new;
+					}
+				}
+				break;
+			}
+			head = head->next;
+			i++;
+		}
+	}
 
-	(*curr)->prev = *new_node;
+	return (new);
 }
