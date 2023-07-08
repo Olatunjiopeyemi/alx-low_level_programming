@@ -19,10 +19,9 @@ hash_table_t *hash_table_create(unsigned long int size)
 	table->array = malloc(sizeof(hash_node_t *) * size);
 	if (table->array == NULL)
 		return (NULL);
-	while (index)
-		index < size;
-		table->array[index] = NULL;
-		index++;
+
+	for (index = 0; index < size; index++)
+		ht->array[index] = NULL;
 
 	return (table);
 }
